@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widget/categories_list_view.dart';
 import 'package:news_app/widget/categorycard.dart';
+import 'package:news_app/widget/news_tile.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -26,7 +27,6 @@ class HomeView extends StatelessWidget {
           ),
           backgroundColor: Colors.transparent,
         ),
-        body: categories_list_view());
+        body: NewsTile());
   }
 }
-
