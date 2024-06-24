@@ -7,23 +7,25 @@ class categories_list_view extends StatelessWidget {
   const categories_list_view({
     super.key,
   });
-final List<CategoryModel> catagories=const[
-  CategoryModel(categoryName: 'buisness', imageAssetUrl: 'buisness.jpg'),
-  CategoryModel(categoryName: 'entertainment', imageAssetUrl: 'entertainment.jpg'),
-  CategoryModel(categoryName: 'sport', imageAssetUrl: 'assets\sport1.jpg'),
-  CategoryModel(categoryName: 'sport', imageAssetUrl: 'assets\sport2.jpg')
-];
+  final List<CategoryModel> catagories = const [
+    CategoryModel(categoryName: 'buisness', imageAssetUrl: 'buisness.jpg'),
+    CategoryModel(
+        categoryName: 'entertainment', imageAssetUrl: 'entertainment.jpg'),
+    CategoryModel(categoryName: 'sport', imageAssetUrl: 'sport1.jpg'),
+    CategoryModel(categoryName: 'sport', imageAssetUrl: 'sport2.jpg')
+  ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 200,
       child: ListView.builder(
-        
-        scrollDirection: Axis.horizontal,
-        itemCount: catagories.length,
-        itemBuilder: (context, index) {
-        return Categorycard(category: catagories[index],);
-      }),
+          scrollDirection: Axis.horizontal,
+          itemCount: catagories.length,
+          itemBuilder: (context, index) {
+            return Categorycard(
+              category: catagories[index],
+            );
+          }),
     );
   }
 }
