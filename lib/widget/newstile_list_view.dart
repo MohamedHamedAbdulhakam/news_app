@@ -8,13 +8,8 @@ class newstile_list_view extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return NewsTile();
-      },
-    );
+    return SliverList(delegate: SliverChildBuilderDelegate((context, index) {
+      return const NewsTile();
+    }));
   }
 }
