@@ -9,7 +9,8 @@ class newstile_list_view extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: BouncingScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       itemCount: 10,
       itemBuilder: (context, index) {
         return NewsTile();
