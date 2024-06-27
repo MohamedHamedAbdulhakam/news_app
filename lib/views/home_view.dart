@@ -37,6 +37,7 @@ class HomeView extends StatelessWidget {
                   height: 30,
                 ),
               ),
+              newstile_list_view(),
               newstile_list_view()
             ],
           )
