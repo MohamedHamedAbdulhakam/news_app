@@ -9,7 +9,9 @@ class NewsService {
         'https://newsapi.org/v2/top-headlines?country=eg&apiKey=42723e48db4b4c4986d34bc61fdfa02d&category=general');
     Map<String, dynamic> jsondata = response.data;
     List<dynamic> articles = jsondata['articles'];
-    print(articles);
+    for (var article in articles) {
+      print(article['author']);
+    }
   }
   // void getgeneral_news() async {
   //   final response = await dio.get(
