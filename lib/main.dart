@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/views/home_view.dart';
+import 'package:dio/dio.dart';
 
 void main() {
   runApp(NewsApp());
@@ -7,9 +8,7 @@ void main() {
 
 final dio = Dio();
 
-class Dio {
-  get(String s) {}
-}
+
 
 void getHttp() async {
   final response = await dio.get('https://dart.dev');
