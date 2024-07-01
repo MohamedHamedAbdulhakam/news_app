@@ -4,8 +4,7 @@ import 'package:dio/dio.dart';
 
 void main() {
   runApp(NewsApp());
-  getgeneral_news();
-  getsports_news();
+ 
 }
 
 final dio = Dio();
