@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:news_app/models/article_model.dart';
 
 class NewsService {
   final Dio dio;
@@ -9,9 +10,18 @@ class NewsService {
         'https://newsapi.org/v2/top-headlines?country=eg&apiKey=42723e48db4b4c4986d34bc61fdfa02d&category=general');
     Map<String, dynamic> jsondata = response.data;
     List<dynamic> articles = jsondata['articles'];
+    // for (var article in articles) {
+    //   print(article['author']);
+    // }
+    List<ArticleModel> articleList = [];
     for (var article in articles) {
-      print(article['author']);
+      ArticleModel articleModel = ArticleModel(
+          image: article['urlToImage'],
+          title: article['title'],
+          subtitle: article['description']);
+      articleList.add(articleModel);
     }
+    print(articleList);
   }
   // void getgeneral_news() async {
   //   final response = await dio.get(
