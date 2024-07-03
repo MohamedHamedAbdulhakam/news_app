@@ -24,6 +24,7 @@ class _newstile_list_viewState extends State<newstile_list_view> {
 
   Future<void> getgeneral_news() async {
     articles = await NewsService(dio: Dio()).getNews();
+    setState(() {});
   }
 
   @override
