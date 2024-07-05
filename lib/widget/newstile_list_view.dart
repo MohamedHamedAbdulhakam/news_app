@@ -31,14 +31,12 @@ class _newstile_list_viewState extends State<newstile_list_view> {
 
   @override
   Widget build(BuildContext context) {
-    return isLoading
-        ? SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()))
-        : SliverList(
-            delegate: SliverChildBuilderDelegate(childCount: articles.length,
-                (context, index) {
-            return NewsTile(
-              articalModel: articles[index],
-            );
-          }));
+    return SliverList(
+        delegate: SliverChildBuilderDelegate(childCount: articles.length,
+            (context, index) {
+      return NewsTile(
+        articalModel: articles[index],
+      );
+    }));
   }
 }
