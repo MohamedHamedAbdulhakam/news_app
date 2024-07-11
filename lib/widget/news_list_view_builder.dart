@@ -31,13 +31,15 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
 
   @override
   Widget build(BuildContext context) {
-    return isLoading
-        ? SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()))
-        : articles.isNotEmpty
-            ? newstile_list_view(
-                articles: articles,
-              )
-            : SliverToBoxAdapter(
-                child: Text("oops there was an error ,try later"));
+    return FutureBuilder(future: future, builder: builder)
+    // return isLoading
+    //     ? SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()))
+    //     : articles.isNotEmpty
+    //         ? newstile_list_view(
+    //             articles: articles,
+    //           )
+    //         : SliverToBoxAdapter(
+    //             child: Text("oops there was an error ,try later"),
+    //             );
   }
 }
