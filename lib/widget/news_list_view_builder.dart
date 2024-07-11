@@ -2,18 +2,18 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
 import 'package:news_app/service/news_service.dart';
-import 'package:news_app/widget/news_tile.dart';
+import 'package:news_app/widget/newstile_list_view.dart';
 
-class newstile_list_view extends StatefulWidget {
-  const newstile_list_view({
+class NewsListViewBuilder extends StatefulWidget {
+  const NewsListViewBuilder({
     super.key,
   });
 
   @override
-  State<newstile_list_view> createState() => _newstile_list_viewState();
+  State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
 }
 
-class _newstile_list_viewState extends State<newstile_list_view> {
+class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
   List<ArticleModel> articles = [];
   bool isLoading = true;
   @override
@@ -33,15 +33,8 @@ class _newstile_list_viewState extends State<newstile_list_view> {
   Widget build(BuildContext context) {
     return isLoading
         ? SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()))
-        : SliverList(
-            delegate: SliverChildBuilderDelegate(
-              childCount: articles.length,
-              (context, index) {
-                return NewsTile(
-                  articalModel: articles[index],
-                );
-              },
-            ),
+        : newstile_list_view(
+            articles: articles,
           );
   }
 }

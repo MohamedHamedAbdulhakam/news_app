@@ -1,5 +1,9 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/models/article_model.dart';
+import 'package:news_app/service/news_service.dart';
 import 'package:news_app/widget/categories_list_view.dart';
+import 'package:news_app/widget/news_list_view_builder.dart';
 import 'package:news_app/widget/news_tile.dart';
 import 'package:news_app/widget/newstile_list_view.dart';
 
@@ -37,8 +41,7 @@ class HomeView extends StatelessWidget {
                   height: 30,
                 ),
               ),
-              newstile_list_view(),
-              newstile_list_view()
+              NewsListViewBuilder(),
             ],
           )
 

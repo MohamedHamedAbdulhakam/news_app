@@ -9,15 +9,15 @@ class NewsTile extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(6),
-          child: Image.network(
-            articalModel.image!,
-            height: 200,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
-        ),
+        //ClipRRect(
+        //  borderRadius: BorderRadius.circular(6),
+        // child: Image.network(
+        // articalModel.image!,
+        // height: 200,
+        //width: double.infinity,
+        // fit: BoxFit.cover,
+        //),
+        //  ),
         const SizedBox(
           height: 12,
         ),
