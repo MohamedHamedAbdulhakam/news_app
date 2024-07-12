@@ -20,13 +20,14 @@ class categories_list_view extends StatelessWidget {
     return SizedBox(
       height: 100,
       child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: catagories.length,
-          itemBuilder: (context, index) {
-            return Categorycard(
-              category: catagories[index],
-            );
-          }),
+        scrollDirection: Axis.horizontal,
+        itemCount: catagories.length,
+        itemBuilder: (context, index) {
+          return Categorycard(
+            category: catagories[index],
+          );
+        },
+      ),
     );
   }
 }
