@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
@@ -31,7 +31,7 @@ class HomeView extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
       ),
-      body: Padding(
+      body: const Padding(
           padding: EdgeInsets.all(30),
           child: CustomScrollView(
             slivers: [

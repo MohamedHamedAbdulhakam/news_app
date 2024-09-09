@@ -21,6 +21,7 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
     future = NewsService(dio: Dio()).getNews(category: 'general');
   }
 
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleModel>>(
       future: future,
@@ -34,7 +35,7 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
             child: Text("oops there was an error ,try later"),
           );
         } else {
-          return SliverToBoxAdapter(
+          return const SliverToBoxAdapter(
               child: Center(child: CircularProgressIndicator()));
         }
       },

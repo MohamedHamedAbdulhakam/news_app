@@ -1,6 +1,4 @@
 import 'dart:core';
-import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
-//import 'dart:core' hide String;
 import 'dart:core' as core;
 import 'package:dio/dio.dart';
 import 'package:news_app/models/article_model.dart';

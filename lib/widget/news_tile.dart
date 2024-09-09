@@ -9,22 +9,22 @@ class NewsTile extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        //ClipRRect(
-        //  borderRadius: BorderRadius.circular(6),
-        // child: Image.network(
-        // articalModel.image!,
-        // height: 200,
-        //width: double.infinity,
-        // fit: BoxFit.cover,
-        //),
-        //  ),
+        ClipRRect(
+         borderRadius: BorderRadius.circular(6),
+        child: Image.network(
+        articalModel.image??'',
+        height: 200,
+        width: double.infinity,
+        fit: BoxFit.cover,
+        ),
+         ),
         const SizedBox(
           height: 12,
         ),
         Text(articalModel.title,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black,
                 fontSize: 30,
                 fontWeight: FontWeight.w500)),
@@ -34,7 +34,7 @@ class NewsTile extends StatelessWidget {
         Text(articalModel.subtitle ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
+            style:const  TextStyle(
               color: Colors.grey,
               fontSize: 20,
             )),
