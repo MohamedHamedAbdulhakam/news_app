@@ -1,19 +1,19 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/models/category_model.dart';
-import 'package:news_app/widget/categorycard.dart';
 
-class categories_list_view extends StatelessWidget {
-  const categories_list_view({
+import '../models/category_model.dart';
+import 'categorycard.dart';
+
+class CategoriesListView extends StatelessWidget {
+  const CategoriesListView({
     super.key,
   });
   final List<CategoryModel> catagories = const [
-    CategoryModel(
-        categoryName: 'entertainment', imageAssetUrl: 'entertainment.jpg'),
-    CategoryModel(
-        categoryName: 'entertainment', imageAssetUrl: 'entertainment.jpg'),
-    CategoryModel(categoryName: 'sport', imageAssetUrl: 'sport1.jpg'),
-    CategoryModel(categoryName: 'sport', imageAssetUrl: 'sport2.jpg')
+    CategoryModel(categoryName: 'programming', imageAssetUrl: 'assets/technology.jpeg'),
+    CategoryModel(categoryName: 'health', imageAssetUrl: 'assets/health.avif'),
+    CategoryModel(categoryName: 'sport', imageAssetUrl: 'assets/sports.avif'),
+    CategoryModel(categoryName: 'entertainment', imageAssetUrl: 'assets/general.avif'),
+     CategoryModel(categoryName: 'science', imageAssetUrl: 'assets/science.avif'),
+      CategoryModel(categoryName: 'general', imageAssetUrl: 'assets/general.avif')
   ];
   @override
   Widget build(BuildContext context) {

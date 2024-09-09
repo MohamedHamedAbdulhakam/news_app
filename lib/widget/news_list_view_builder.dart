@@ -29,7 +29,7 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return newstile_list_view(
+          return NewstileListView(
             articles: snapshot.data!,
           );
         } else if (snapshot.hasError) {
@@ -42,14 +42,6 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
         }
       },
     );
-    // return isLoading
-    //     ? SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()))
-    //     : articles.isNotEmpty
-    //         ? newstile_list_view(
-    //             articles: articles,
-    //           )
-    //         : SliverToBoxAdapter(
-    //             child: Text("oops there was an error ,try later"),
-    //             );
+   
   }
 }

@@ -12,9 +12,11 @@ class Categorycard extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return  CategoryView(category: category.categoryName,);
+              return CategoryView(
+                category: category.categoryName,
+              );
             },
-          ),
+          ), 
         );
       },
       child: Padding(
@@ -23,10 +25,15 @@ class Categorycard extends StatelessWidget {
           height: 200,
           width: 400,
           decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(15),
-              image: DecorationImage(
-                  fit: BoxFit.fill, image: AssetImage(category.imageAssetUrl))),
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(15),
+            image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage(
+                category.imageAssetUrl,
+              ),
+            ),
+          ),
           child: Center(
             child: Text(
               category.categoryName,
